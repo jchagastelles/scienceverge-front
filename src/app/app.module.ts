@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PesquisaPalavraComponent } from './pesquisa-palavra/pesquisa-palavra.component';
+import { CriarPesquisaComponent } from './criar-pesquisa/criar-pesquisa.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PesquisaPalavraComponent,
+    CriarPesquisaComponent
   ],
   imports: [
     BrowserModule,
