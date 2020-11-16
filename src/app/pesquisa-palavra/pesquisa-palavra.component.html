@@ -1,2 +1,5 @@
-<p>componente pesquisa-palavra</p>
-<!--<input #palavra (keyup.enter)="pesquisaPalavra(palavra.value)">-->
+<p>Informe palavra-chave para pesquisar</p>
+<div id="divBusca">
+    <input #palavra type="text" id="txtBusca" placeholder="Buscar..." (keyup.enter)="pesquisaPalavra(palavra.value)"/>
+    <button id="btnBusca" (click)="pesquisaPalavra(palavra.value)">Buscar</button>
+</div>

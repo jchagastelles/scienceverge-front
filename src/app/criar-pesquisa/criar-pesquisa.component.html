@@ -1,1 +1,7 @@
-<p>criar-pesquisa works!</p>
+<p>Preencha as informaçoes da nova pesquisa</p>
+<div id="divCriar">
+    <input style="display: block; margin-bottom: 5px;" #titulo type="text" id="nomePesq" name="palavra" placeholder="Título" ngModel/>
+    <input style="display: block; margin-bottom: 5px" #urlPDF type="text" id="urlPDF" name="urlPDF" placeholder="URL do PDF" ngModel/>
+    <input style="display: block; margin-bottom: 5px" #comentario type="text" id="comentario" name="comentario" placeholder="Comentário" ngModel/>
+    <button id="btnCriar" (click)="addPesquisa(titulo.value, urlPDF.value, comentario.value)">Criar Pesquisa</button>
+</div>
