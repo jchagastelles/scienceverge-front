@@ -1,0 +1,48 @@
+ <!--<div class="card-container">
+    <a class="card" target="_self" routerLink="/pesquisa-palavra" routerLinkActive="active">
+
+      <span>Pesquisar palavra</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+      </a>
+
+    <a class="card" target="_self"  routerLink="/criar-pesquisa" routerLinkActive="active">
+      <span>Criar Pesquisa Cientifica</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+    </a>
+  </div>
+-->
+<style>
+.container{
+  display: flex;
+  justify-content: center;
+  padding:50px;
+  width: 500px;
+}
+
+p.none {
+  line-height: 0.1;
+}
+button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+input[type=text], input[type=password], input[type=email] {
+    width: 70%;
+    margin: 8px 0;
+    padding: 7px 5px;
+    box-sizing: border-box;
+  }
+</style>
+    <div class="container">
+      <input type="text" class="input" placeholder="Digite palavras chave para sua pesquisa">
+      <p><input type="button" value="Procurar" class="search-btn"></p>
+    </div>

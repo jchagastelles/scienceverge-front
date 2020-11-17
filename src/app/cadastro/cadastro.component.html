@@ -1,0 +1,70 @@
+<body>
+<style>
+
+.container{
+  padding:50px;
+  width: 300px;
+  height: 100px;
+}
+
+p.none {
+  line-height: 0.1;
+}
+  p.small {
+  line-height: 0.5;
+}
+
+p.big {
+  line-height: 1.8;
+}
+
+p.normal {
+  line-height: 1.1;
+}
+
+  input[type=text], input[type=password], input[type=email] {
+    width: 300px;
+    margin: 8px 0;
+    padding: 7px 5px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  textarea[type=text]{
+    width: 300px;
+    height: 200px;
+    margin: 8px 0;
+    padding: 7px 5px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+</style>
+
+<div class="divCadastro">
+  <p class= "none"><label>Nome completo</label></p>
+  <p class= "none"><input #name  type="text" id="nomeCadastro" placeholder="Digite seu nome" ngModel required></p>
+
+  <p class= "none"><label>Senha </label></p>
+  <p class= "none"><input #password type="text" id="senhaCadastro" placeholder="Digite uma senha" ngModel required></p>
+
+  <p class= "none"><label>E-mail</label></p>
+  <p class= "none"><input #email type="text" id="emailCadastro" placeholder="Digite um e-mail válido" ngModel required></p>
+
+  <p class= "none"><label>Descrição </label></p>
+  <p class= "none"><textarea #description type="text" id="descrCadastro" form="usrform" placeholder="Descreva sobre sua carreira"></textarea></p>
+</div>
+
+<div class="check">
+  <form action="/action_page.php">
+    <input type="checkbox" name="investidor" value="Investidor">
+    <label for="investidor"> Investidor</label><br>
+    <input type="checkbox" name="Academico" value="Car">
+    <label for="academico"> Acadêmico</label><br>
+  </form>
+
+  <p class= "none"><button type="submit">Finalizar</button></p>
+  <button id="btnCriar" (click)="addCadastro(name.value, password.value, email.value, description.value)"></button>
+  <p class= "none"><button type="button" value="Voltar" onclick = history.back(home)>Voltar </button></p>
+</div>
+</body>
