@@ -4,7 +4,9 @@ import { PesquisaPalavraComponent } from './pesquisa-palavra/pesquisa-palavra.co
 import { CriarPesquisaComponent } from './criar-pesquisa/criar-pesquisa.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { EditarProfileComponent } from './editar-profile/editar-profile.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'criar-pesquisa', component: CriarPesquisaComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'cadastro', component: CadastroComponent }
+  { path: 'cadastrar', component: CadastrarComponent },
+  { path: 'editar-profile', component: EditarProfileComponent }
+
 ];
 
 @NgModule({

@@ -301,12 +301,17 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <a href="login">
-    <div class="button" target="_self" routerLink="/login" routerLinkActive="active">
+    <div *ngIf="logged==0" class="button" target="_self" routerLink="/login" routerLinkActive="active">
       Login
     </div>
   </a>
-  <a href="cadastro">
-    <div class="button" target="_self" routerLink="/cadastro" routerLinkActive="active">
+  <a href="editar-profile">
+    <div *ngIf="logged==1" class="button" target="_self" routerLink="/editar-profile" routerLinkActive="active">
+      Editar Profile
+    </div>
+  </a>
+  <a href="cadastrar">
+    <div *ngIf="logged==0" class="button" target="_self" routerLink="/cadastrar" routerLinkActive="active">
       Cadastre-se
     </div>
   </a>
@@ -318,6 +323,7 @@
   <div class="card highlight-card card-small">
     <svg id="rocket" alt="Rocket Ship" width="101.678" height="101.678"
       viewBox="0 0 101.678 101.678">
+  <!-- aqui eh a parte do logo-->
       <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
         <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)"
           fill="#dd0031" />
@@ -343,7 +349,7 @@
   </div>
 
   <!-- Resources -->
-  <h3>Funcionalidades</h3>
+  <h3>Seja Bem-Vindo</h3>
 
   <div class="card-container">
     <a class="card" target="_self" routerLink="/pesquisa-palavra" routerLinkActive="active">
