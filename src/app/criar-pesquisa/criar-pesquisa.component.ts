@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵbypassSanitizationTrustStyle } from '@angular/core';
 
 @Component({
   selector: 'app-criar-pesquisa',
@@ -17,11 +17,12 @@ export class CriarPesquisaComponent implements OnInit {
     // chamada backend
     this.url = 'http://localhost:8080/pesquisa-cientifica/create';
     const pesquisa = {
-      titulo: titulo,
-      urlPDF: urlPDF,
-      comentario: comentario
+      nome: titulo,
+      pdf_url: urlPDF,
+      comentario: comentario,
+      isPrivate: true
     }
-    this.http.post(this.url, JSON.stringify(pesquisa)).subscribe(data => {
+    this.http.post(this.url, pesquisa).subscribe(data => {
       console.log(data); // mostra resultado no console (para verificacao em testes)
     });
   }
