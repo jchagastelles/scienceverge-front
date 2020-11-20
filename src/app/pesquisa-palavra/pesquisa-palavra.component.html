@@ -1,5 +1,48 @@
+<style>
+
+  .container{
+    padding:50px;
+    width: 300px;
+    height: 100px;
+  }
+
+  p.none {
+    line-height: 0.1;
+  }
+    p.small {
+    line-height: 0.5;
+  }
+
+  p.big {
+    line-height: 1.8;
+  }
+
+  p.normal {
+    line-height: 1.1;
+  }
+
+  input[type=text], input[type=password], input[type=email], input[type=number] {
+    width: 300px;
+    margin: 8px 0;
+    padding: 7px 5px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  textarea[type=text]{
+    width: 300px;
+    height: 200px;
+    margin: 8px 0;
+    padding: 7px 5px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+</style>
+
 <p>Informe palavra-chave para pesquisar</p>
 <div id="divBusca">
-    <input #palavra type="text" id="txtBusca" placeholder="Buscar..." (keyup.enter)="pesquisaPalavra(palavra.value)"/>
-    <button id="btnBusca" (click)="pesquisaPalavra(palavra.value)">Buscar</button>
+    <input #palavra type="text" id="txtBusca" class="input" placeholder="Digite palavras chave para sua pesquisa" (keyup.enter)="pesquisaPalavra(palavra.value)">
+    <p><input id="btnBusca"  type="button" value="Procurar" class="search-btn" (click)="pesquisaPalavra(palavra.value)"></p>
+    <p class= "none"><button type="button" value="Voltar" onclick = history.back()>Voltar </button></p>
+
 </div>

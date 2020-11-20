@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-
 import { Component, OnInit, ɵbypassSanitizationTrustStyle } from '@angular/core';
 
 @Component({
@@ -8,20 +7,17 @@ import { Component, OnInit, ɵbypassSanitizationTrustStyle } from '@angular/core
   styleUrls: ['./editar-profile.component.css']
 })
 export class EditarProfileComponent implements OnInit {
-
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
-
   editar: string;
-  changeCadastro(name: string, password: number, email: string, phone: number, description: string) {
+  changeCadastro(password: number, email: string, phone: number, description: string) {
     // chamada backend
-    this.editar = 'http://localhost:8080/cadastro/create';
+    this.editar = 'http://localhost:8080/cadastro/editar';
     const editar = {
-      nome: name,
       senha: password,
-      email: email,
+      endEmail: email,
       telefone: phone,
       descricao: description
     };
